@@ -1,0 +1,62 @@
+.petsweb-footer{
+    position: absolute;
+    width: 100%;
+    background-color: #272727;
+    min-height: 180px;
+    margin-top: 100px;
+}
+
+.petsweb-footer .wrapper h3{
+    font-family: 'Poppins';
+    color: white;
+    /* border: 1px solid white; */
+    font-weight: 100;
+    letter-spacing: 3px;
+    padding: 17px;
+}
+
+.petsweb-footer .wrapper .column-wrapper div{
+    /* border: 1px solid white; */
+    width: 250px;
+    padding: 7px;
+    color: white;
+}
+
+.petsweb-footer .wrapper .column-wrapper{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.column-wrapper h4{
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    color: rgb(185, 185, 185);
+}
+
+.column-wrapper ul{
+    list-style: none;
+    margin-top: 17px;
+
+}
+
+.column-wrapper li{
+    font-weight: 100;
+    margin-top: 5px;
+    color: rgb(158, 158, 158);
+    letter-spacing: 2px;
+}
+
+.bottom-line{
+    width: 100%;
+    padding: 17px;
+    text-align: center;
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
+
+.bottom-line h4{
+    font-weight: 100;
+}

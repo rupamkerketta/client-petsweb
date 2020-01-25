@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
+.pet-name,
+.pet-info {
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.pet-name {
+    color: rgb(59, 59, 59);
+}
+
+.pet-info {
+    color: rgb(80, 80, 80);
+}
+
+.about-pet {
+    /* border: 1px solid black; */
+    padding: 15px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+}
+
+.about-pet div {
+    /* border: 1px solid black; */
+    background-color: rgb(54, 52, 52);
+    color: rgb(231, 231, 231);
+    text-align: center;
+    padding-top: 30px;;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 7px;
+    margin-top: 12px;
+    width: 200px;
+    padding-bottom: 7px;
+}
+
+.about-pet div h4 {
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    font-family: 'Solway';
+    font-weight: 100;
+    line-height: 30px;
+}
+
+.about-pet div p{
+    padding-bottom: 10px;
+}
+
+.more-about {
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.more-about h2 {
+    color: rgb(53, 53, 53);
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.more-about p {
+    color: rgb(65, 65, 65);
+}
+
+.more-about p {
+    margin-top: 7px;
+    color: rgb(43, 43, 43);
+    padding-bottom: 15px;
+    word-spacing: 4px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+
+.about-pet-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.about-pet-container h2 {
+    color: rgb(48, 48, 48);
+}
+
+.profile-container {
+    /* border: 1px solid black; */
+}
+
+.pet-pic {
+    /* border: 1px solid black; */
+    width: 210px;
+    margin: auto;
+}
+
+.pet-pic img {
+    width: 210px;
+    margin: auto;
+    border-radius: 10px;
+}

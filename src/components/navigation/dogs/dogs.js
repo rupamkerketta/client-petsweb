@@ -27,7 +27,7 @@ const Dogs = (props) => {
             {
                 dogs.map(dog => {
                     const style = {
-                        background: `url('http://localhost:5000/${dog.name}.jpg') no-repeat center`,
+                        background: `url('http://localhost:5000/pet-pics/${dog.name}.jpg') no-repeat center`,
                         backgroundSize: 'cover'
                     }
                     return(

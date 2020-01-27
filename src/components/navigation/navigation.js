@@ -9,6 +9,9 @@ import { useSelector } from 'react-redux';
 import Home from './home-page/homePage';
 import Dogs from './dogs/dogs';
 import Cats from './cats/cats';
+import User from './user/user';
+
+import Logout from './logout/logout';
 
 // Footer
 import Footer from './footer/footer';
@@ -83,6 +86,8 @@ const Navigation = (props) => {
             <Switch>
                 <Route path="/dogs" component={Dogs} />
                 <Route path="/cats" component={Cats} />
+                <Route path="/user" component={User} />
+                <Route path="/logout" component={Logout} />
             </Switch>
             {/* <Footer /> */}
         </div>

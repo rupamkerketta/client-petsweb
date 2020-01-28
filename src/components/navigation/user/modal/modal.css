@@ -10,6 +10,7 @@
     transform: translate(-50%, -50%);
     box-shadow: 0 30px 20px -17px rgb(54, 54, 54);
     z-index: 4;
+    transition: .4s all ease;
 }
 
 @media only screen and (max-width: 1920px){

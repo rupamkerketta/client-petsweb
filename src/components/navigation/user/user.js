@@ -4,7 +4,8 @@ import axios from 'axios';
 import {Redirect} from 'react-router-dom';
 import './user.css';
 
-
+// Modal
+import Modal from './modal/modal';
 
 import editIcon from '../../res/images/edit.png';
 import pin from '../../res/images/pin.png';
@@ -60,6 +61,7 @@ const User = () => {
     return(
         <div className="container">
             {showModal ? <div className="modal-glass" onClick={() => handleUpdate()}></div> : ""}
+            {showModal ? <Modal /> : ""}
             {!loggedIN ? <Redirect to="/" /> : ""}
             <div className="main-banner">
                 <div className="cover-bg">

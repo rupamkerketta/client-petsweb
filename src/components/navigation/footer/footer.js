@@ -56,7 +56,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="bottom-line">
-                <h4>&copy; 2020 Petsweb By Bitzplease</h4>
+                <h4>&copy; 2020 Petsweb By Bitz Please</h4>
             </div>
         </div>
     );

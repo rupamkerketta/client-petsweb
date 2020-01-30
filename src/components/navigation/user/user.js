@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import axios from 'axios';
+import useForceUpdate from 'use-force-update';
 import {Redirect} from 'react-router-dom';
 import './user.css';
 
@@ -10,8 +11,13 @@ import Modal from './modal/modal';
 import editIcon from '../../res/images/edit.png';
 import pin from '../../res/images/pin.png';
 
-
 const User = () => {
+
+
+    const email = useSelector(state => state.userEmail);
+    const emailSplit = email.split('@')[0];
+
+    const [update, setUpdate] = useState(false);
 
     const [showModal, setShowModal] = useState(false);
 
@@ -20,54 +26,48 @@ const User = () => {
 
     // User-Details
     const user = useState(useSelector(state => state.user));
-    const email = useState(useSelector(state => state.userEmail));
-
+       
+        
+        const getUserDetails = () => {
+            axios.post('http://localhost:5000/api/user', {
+                emailId : email
+            }).then(response => {
+                console.log(response.data);
+            }).catch(err => {
+                console.log(err);
+            });
+        }
+        
     
-    
-    // User-Email
-    const userEmail = useSelector(state => state.userEmail);
-
-    // User-Pic Name
-    const userPic = userEmail.split("@")[0];
-    console.log(userPic);
-
-
-    const getUserDetails = () => {
-        axios.post('http://localhost:5000/api/user', {
-            emailId : userEmail
-        }).then(response => {
-            console.log(response.data);
-            console.log('[USER_API]');
-        }).catch(err => {
-            console.log(err);
-        });
-    }
-
-
     useEffect(() => {
         getUserDetails();
     }, []);
     
 
-    const handleUpdate = () => {
+    const handleUpdate = (picUpdate) => {
         if(showModal){
             setShowModal(false);
         }
         else{
             setShowModal(true);
         }
+
+        if(picUpdate){
+            setShowModal(true);
+            window.location.reload(true);
+        }
     };
     
     return(
         <div className="container">
-            {showModal ? <div className="modal-glass" onClick={() => handleUpdate()}></div> : ""}
-            {showModal ? <Modal /> : ""}
+            {showModal ? <div className="modal-glass"></div> : ""}
+            {showModal ? <Modal handleUpdate={handleUpdate} userPic={`http://localhost:5000/user-pics/${emailSplit}.png`}/> : ""}
             {!loggedIN ? <Redirect to="/" /> : ""}
             <div className="main-banner">
                 <div className="cover-bg">
                 </div>
                 <div className="user-dp">
-                    <img src={`http://localhost:5000/user-pics/${userPic}.png`} alt={`${user}`}/>
+                    <img src={`http://localhost:5000/user-pics/${emailSplit}.png`} alt={`${user}`}/>
                 </div>
                 <div className="user-info-1">
                     <h2>{user}</h2>

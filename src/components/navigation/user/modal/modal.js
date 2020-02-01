@@ -21,15 +21,13 @@ const Modal = (props) => {
 
     const onSubmit = async e => {
         e.preventDefault();
-
-        
         
         const formData = new FormData();
         formData.append('file', file);
         formData.append('email', email.split('@')[0]);
         
         try {
-            const res = await axios.post('http://localhost:5000/upload', formData,
+            const res = await axios.post('http://localhost:5000/upload-userdp', formData,
             {
                 headers: {
                     'Content-Type': 'multipart/form-data'
@@ -54,7 +52,7 @@ const Modal = (props) => {
 
     return(
         <div className="modal">
-            <div className="close-btn" onClick={() => props.handleUpdate(false)}>
+            <div className="close-btn" onClick={() => props.handleUpdate()}>
                 <img src={closeBtn} alt="close"/>
             </div>
             <div className="update-info-form">
@@ -63,8 +61,7 @@ const Modal = (props) => {
                         <h2>New Profile Pic</h2>
                         <img src={newUserDP} alt="User DP" className="upd-user-dp"/> 
                     </div>
-                    : 
-                    
+                    :                     
                     <div className="current-dp">
                         <h2>Current Profile Pic</h2>
                         <img src={props.userPic} className="upd-user-dp" alt="User DP" />
@@ -73,6 +70,21 @@ const Modal = (props) => {
                 <form onSubmit={onSubmit}>
                     <div className="input-element">
                         <input type="file" name="my-file" id="user-dp-inel" onChange={onChange}/>
+                    </div>
+                    <div class="user-info">
+                        <div className="input-element">
+                            <label htmlFor="user-address">Address</label>
+                            <textarea name="user-address" id="user-address">
+                            </textarea>
+                        </div>
+                        <div className="input-element">
+                            <label htmlFor="user-phone">Phone</label>
+                            <input type="text" name="user-phone" id="user-phone"/> 
+                        </div>
+                        <div className="input-element">
+                            <label htmlFor="user-bio">Bio</label>
+                            <textarea name="user-bio" id="user-bio"></textarea>
+                        </div>
                     </div>
                     <input type="submit" value="Save" />
                 </form>

@@ -20,6 +20,9 @@ const Navigation = (props) => {
 
     const loggedIn = useSelector(state => state.loggedIN);
     const userName = useSelector(state => state.user);
+    const email = useSelector(state => state.userEmail);
+    const emailSplit = email.split('@')[0];
+
 
     const styleBL = {
         textDecoration: 'none'
@@ -42,8 +45,8 @@ const Navigation = (props) => {
                         </NavLink>
                     </li> */}
                     <li>
-                        <NavLink activeClassName="active-nav-link" to="/projects" className="nav-item">
-                            <span>MODULES</span>
+                        <NavLink activeClassName="active-nav-link" to="/rescue" className="nav-item">
+                            <span>RESCUE</span>
                             {/* PROJECTS */}
                         </NavLink>
                     </li>
@@ -58,7 +61,8 @@ const Navigation = (props) => {
                         loggedIn ? 
                                 <li>
                                         <button className="petsweb-user">
-                                                {userName}
+                                                {/* {userName} */}
+                                                <img className="user-ico" src={`http://localhost:5000/user-pics/${emailSplit}.png`} alt="User"/>
                                                 <img src={downArrow} alt=""/>
                                         </button>
                                         <ul className="petsweb-user-list">
@@ -87,9 +91,26 @@ const Navigation = (props) => {
                 <Route path="/dogs" component={Dogs} />
                 <Route path="/cats" component={Cats} />
                 <Route path="/user" component={User} />
+                <Route path="/rescue" component={Rescue} />
                 <Route path="/logout" component={Logout} />
             </Switch>
             {/* <Footer /> */}
+        </div>
+    );
+};
+
+const Rescue = () => {
+    const style = { 
+                   fontFamily: "Poppins", 
+                   fontSize: "2em",
+                   position: "absolute",
+                   top: "50%",
+                   left: "50%",
+                   transform: "translate(-50%, -50%)"
+                }
+    return(
+        <div className="rescue-module" style={{height: "50vh"}}>
+            <h2 style={style}>Rescue</h2>
         </div>
     );
 };

@@ -8,6 +8,7 @@ import Navigation from './components/navigation/navigation';
 import Home from './components/navigation/home-page/homePage';
 import Login from './components/login/login';
 import PetProfile from './components/navigation/pet-profile/pet-profile';
+import About from './components/navigation/about/about';
 
 import axios from 'axios';
 
@@ -74,6 +75,7 @@ function App() {
         }
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
           <Route path="/login" component={Login} />
           <Route path="/pets/:id" component={PetProfile} />
         </Switch>

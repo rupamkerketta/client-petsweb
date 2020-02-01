@@ -1,0 +1,12 @@
+.about-petsweb{
+    font-family: 'Poppins';
+    font-weight: 100;
+    width: 50%;
+    padding-top: 150px;
+    /* border: 1px solid black; */
+    margin: auto;
+    font-size: 0.99em;
+    line-height: 30px;
+    word-spacing: 4px;
+    color: rgb(66, 66, 66);
+}

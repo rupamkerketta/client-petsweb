@@ -17,8 +17,6 @@ const User = () => {
     const email = useSelector(state => state.userEmail);
     const emailSplit = email.split('@')[0];
 
-    const [update, setUpdate] = useState(false);
-
     const [showModal, setShowModal] = useState(false);
 
     // LoggedIn Status
@@ -53,7 +51,6 @@ const User = () => {
         }
 
         if(picUpdate){
-            setShowModal(true);
             window.location.reload(true);
         }
     };

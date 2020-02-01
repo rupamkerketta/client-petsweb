@@ -144,6 +144,13 @@
     align-items: center;
 }
 
+.petsweb-user img:first-child{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: -70px;
+}
+
 
 /* background-color: #ff2a95; */
 

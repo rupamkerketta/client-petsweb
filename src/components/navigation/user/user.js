@@ -5,6 +5,9 @@ import useForceUpdate from 'use-force-update';
 import {Redirect} from 'react-router-dom';
 import './user.css';
 
+// Proxy
+import proxy from '../../../proxy/proxy';
+
 // Modal
 import Modal from './modal/modal';
 
@@ -27,7 +30,7 @@ const User = () => {
        
         
         const getUserDetails = () => {
-            axios.post('http://localhost:5000/api/user', {
+            axios.post(`${proxy}/api/user`, {
                 emailId : email
             }).then(response => {
                 console.log(response.data);
@@ -58,13 +61,13 @@ const User = () => {
     return(
         <div className="container">
             {showModal ? <div className="modal-glass"></div> : ""}
-            {showModal ? <Modal handleUpdate={handleUpdate} userPic={`http://localhost:5000/user-pics/${emailSplit}.png`}/> : ""}
+            {showModal ? <Modal handleUpdate={handleUpdate} userPic={`${proxy}/user-pics/${emailSplit}.png`}/> : ""}
             {!loggedIN ? <Redirect to="/" /> : ""}
             <div className="main-banner">
                 <div className="cover-bg">
                 </div>
                 <div className="user-dp">
-                    <img src={`http://localhost:5000/user-pics/${emailSplit}.png`} alt={`${user}`}/>
+                    <img src={`${proxy}/user-pics/${emailSplit}.png`} alt={`${user}`}/>
                 </div>
                 <div className="user-info-1">
                     <h2>{user}</h2>

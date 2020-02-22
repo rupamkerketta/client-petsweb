@@ -16,6 +16,9 @@ import Logout from './logout/logout';
 // Footer
 import Footer from './footer/footer';
 
+// Proxy
+import proxy from '../../proxy/proxy';
+
 const Navigation = (props) => {
 	const loggedIn = useSelector((state) => state.loggedIN);
 	const userName = useSelector((state) => state.user);
@@ -53,7 +56,7 @@ const Navigation = (props) => {
 							{/* {userName} */}
 							<img
 								className="user-ico"
-								src={`http://localhost:5000/user-pics/${emailSplit}.png`}
+								src={`${proxy}/user-pics/${emailSplit}.png`}
 								alt="User"
 							/>
 							<img src={downArrow} alt="" />
@@ -97,7 +100,7 @@ const Navigation = (props) => {
 								{/* {userName} */}
 								<img
 									className="user-ico"
-									src={`http://localhost:5000/user-pics/${emailSplit}.png`}
+									src={`${proxy}/user-pics/${emailSplit}.png`}
 									alt="User"
 								/>
 								<img src={downArrow} alt="" />

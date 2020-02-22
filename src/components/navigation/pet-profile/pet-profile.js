@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './pet-profile.css';
 
+// Proxy
+import proxy from '../../../proxy/proxy';
+
 const PetProfile = ({match}) => {
 
     const [petProfile, setPetProfile] = useState({});
@@ -12,7 +15,7 @@ const PetProfile = ({match}) => {
     let style = {};
 
     const getProfile = () => {
-        axios.post('http://localhost:5000/api/pet-profile', {
+        axios.post(`${proxy}/api/pet-profile`, {
             dogName : match.params.id
         })
         .then(response => {
@@ -28,7 +31,7 @@ const PetProfile = ({match}) => {
     return(
             <div className="profile-container">
             <div className="pet-pic" style={style}>
-                <img src={`http://localhost:5000/pet-pics/${petProfile.name}.jpg`} alt=""/>
+                <img src={`${proxy}/pet-pics/${petProfile.name}.jpg`} alt=""/>
             </div>
                 <h2 className="pet-name">{petProfile.name}</h2>
             <div className="pet-info">

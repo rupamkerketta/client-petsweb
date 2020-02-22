@@ -3,13 +3,16 @@ import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import './dogs.css';
 
+// Proxy
+import proxy from '../../../proxy/proxy';
+
 
 const Dogs = (props) => {
 
     const [dogs, setDogs] = useState([]);
 
     const getDogs = () => {
-        axios.get('http://localhost:5000/api/dogs')
+        axios.get(`${proxy}/api/dogs`)
         .then(response => {
             console.log(response.data);
             setDogs(response.data);
@@ -27,7 +30,7 @@ const Dogs = (props) => {
             {
                 dogs.map(dog => {
                     const style = {
-                        background: `url('http://localhost:5000/pet-pics/${dog.name}.jpg') no-repeat center`,
+                        background: `url('${proxy}/${dog.name}.jpg') no-repeat center`,
                         backgroundSize: 'cover'
                     }
                     return(

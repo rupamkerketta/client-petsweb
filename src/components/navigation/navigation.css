@@ -1,4 +1,4 @@
-.navigation{
+.navigation {
     display: flex;
     min-height: 10vh;
     justify-content: space-around;
@@ -12,11 +12,11 @@
     z-index: 100;
 }
 
-.navigation .brand-logo{
+.navigation .brand-logo {
     /* border: 1px solid black; */
 }
 
-.navigation .brand-logo{
+.navigation .brand-logo {
     letter-spacing: 4px;
     font-family: 'Nunito';
     /* font-weight: 100; */
@@ -28,7 +28,7 @@
     justify-content: space-between;
 }
 
-.navigation .brand-logo img{
+.navigation .brand-logo img {
     width: 45px;
     /* border: 1px solid white; */
     /* background-color: white; */
@@ -37,7 +37,7 @@
     border-radius: 50%;
 }
 
-.navigation .nav-items{
+.navigation .nav-items {
     display: flex;
     /* border: 1px solid black; */
     right: 140px;
@@ -48,16 +48,16 @@
     width: 440px;
 }
 
-.navigation .nav-items li{
+.navigation .nav-items li {
     list-style: none;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
 
-.navigation .nav-items li .nav-item{
+.navigation .nav-items li .nav-item {
     font-size: 0.9em;
     text-decoration: none;
     letter-spacing: 2px;
@@ -71,24 +71,24 @@ ul{
     transition: all .4s ease-out;
 }
 
-.navigation .nav-items li .nav-item:hover{
+.navigation .nav-items li .nav-item:hover {
     background-color: #d3cfd1;
 }
 
-.active-nav-link{
+.active-nav-link {
     background-color: rgb(255, 43, 91);
 }
 
-.active-nav-link .nav-item{
+.active-nav-link .nav-item {
     color: white;
 }
 
-.mobile-view-user{
+.mobile-view-user {
     display: none;
     border-color: transparent;
 }
 
-.petsweb-user{
+.petsweb-user {
     border-color: transparent;
     font-family: 'Poppins';
     background: none;
@@ -100,7 +100,7 @@ ul{
     width: 10px;
 }
 
-.petsweb-user-list{
+.petsweb-user-list {
     width: 170px;
     height: 120px;
     position: absolute;
@@ -119,19 +119,19 @@ ul{
     z-index: 101;
 }
 
-.petsweb-user-list li{
+.petsweb-user-list li {
     width: 100%;
     height: 100%;
     transition: all .4s ease;
 }
 
-.petsweb-user-list a:hover{
+.petsweb-user-list a:hover {
     text-decoration: underline;
     background-color: rgb(43, 43, 43);
     /* font-size: 1.12em; */
 }
 
-.petsweb-user-list li a{
+.petsweb-user-list li a {
     height: 100%;
     text-decoration: none;
     color: rgb(214, 214, 214);
@@ -141,27 +141,27 @@ ul{
     transition: all .4s ease;
 }
 
-.petsweb-user-list li:nth-child(1) a{
+.petsweb-user-list li:nth-child(1) a {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
-.petsweb-user-list li:nth-child(2) a{
+.petsweb-user-list li:nth-child(2) a {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-.petsweb-user:focus + .petsweb-user-list{
+.petsweb-user:focus+.petsweb-user-list {
     opacity: 1;
     transform: translateY(-5px);
 }
 
-.petsweb-user img{
+.petsweb-user img {
     width: 15px;
     height: 15px;
 }
 
-.petsweb-user{
+.petsweb-user {
     width: 160px;
     /* border: 1px solid black; */
     display: flex;
@@ -169,7 +169,7 @@ ul{
     align-items: center;
 }
 
-.petsweb-user img:first-child{
+.petsweb-user img:first-child {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -243,7 +243,7 @@ ul{
 
 @media only screen and (max-width: 768px) {
 
-    .mobile-view-user{
+    .mobile-view-user {
         display: block;
         width: 120px;
         display: block;
@@ -251,16 +251,16 @@ ul{
         padding-left: -20px;
     }
 
-    .mobile-view-user .petsweb-user img:first-child{
+    .mobile-view-user .petsweb-user img:first-child {
         width: 50px;
         height: 50px;
     }
 
-    .mobile-view-user .petsweb-user img:nth-child(2){
+    .mobile-view-user .petsweb-user img:nth-child(2) {
         margin-left: -17px;
     }
 
-    .navigation{
+    .navigation {
         position: fixed;
         top: 0;
         width: 100%;

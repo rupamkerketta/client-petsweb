@@ -30,7 +30,7 @@ const Dogs = (props) => {
             {
                 dogs.map(dog => {
                     const style = {
-                        background: `url('${proxy}/${dog.name}.jpg') no-repeat center`,
+                        background: `url('${proxy}/pet-pics/${dog.name}.jpg') no-repeat center`,
                         backgroundSize: 'cover'
                     }
                     return(

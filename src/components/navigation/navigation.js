@@ -77,11 +77,6 @@ const Navigation = (props) => {
 				</div>
 
 				<ul className="nav-items">
-					{/* <li>
-                        <NavLink activeClassName="active-nav-link" to="/">
-                        <span className="nav-item">HOME</span>
-                        </NavLink>
-                    </li> */}
 					<li>
 						<NavLink activeClassName="active-nav-link" to="/rescue" className="nav-item">
 							<span>RESCUE</span>

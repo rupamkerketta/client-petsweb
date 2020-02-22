@@ -9,6 +9,9 @@ import brandLogo from '../res/images/pawprint-black.png';
 import googleIcon from '../res/images/google.png';
 import facebookIcon from '../res/images/facebook.png';
 
+// Proxy
+import proxy from '../../proxy/proxy';
+
 const Login = (props) => {
 	const dispatch = useDispatch();
 
@@ -55,7 +58,7 @@ const Login = (props) => {
 			console.log('Credentials dae bhsdk!!!');
 		} else {
 			axios
-				.post('http://localhost:5000/login', {
+				.post(`${proxy}/login`, {
 					username: userName,
 					password: password
 				})

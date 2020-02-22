@@ -85,10 +85,11 @@ ul{
 
 .mobile-view-user{
     display: none;
+    border-color: transparent;
 }
 
 .petsweb-user{
-    border: 0;
+    border-color: transparent;
     font-family: 'Poppins';
     background: none;
     color: #353535;
@@ -96,6 +97,7 @@ ul{
     font-weight: 100;
     outline: none;
     cursor: pointer;
+    width: 10px;
 }
 
 .petsweb-user-list{
@@ -243,14 +245,19 @@ ul{
 
     .mobile-view-user{
         display: block;
-        width: 150px;
+        width: 120px;
         display: block;
         top: 80px;
+        padding-left: -20px;
     }
 
     .mobile-view-user .petsweb-user img:first-child{
         width: 50px;
         height: 50px;
+    }
+
+    .mobile-view-user .petsweb-user img:nth-child(2){
+        margin-left: -17px;
     }
 
     .navigation{

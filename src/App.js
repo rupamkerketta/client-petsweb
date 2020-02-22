@@ -12,6 +12,9 @@ import About from './components/navigation/about/about';
 
 import axios from 'axios';
 
+// Proxy
+import proxy from './proxy/proxy';
+
 // Footer
 import Footer from './components/navigation/footer/footer';
 
@@ -48,7 +51,7 @@ function App() {
 
       // Send token to the server
       axios.defaults.headers.post['authorization'] = `Bearer ${cookie.token}`; // For all posts requests
-      axios.post('http://localhost:5000/user')
+      axios.post(`${proxy}/user`)
             .then(response => {
                 console.log(response.data.authData);
                 disLog(); // Login-status

@@ -28,7 +28,7 @@ const PetProfile = ({match}) => {
     return(
             <div className="profile-container">
             <div className="pet-pic" style={style}>
-                <img src={`http://localhost:5000/pet-pics/${petProfile.name}.jpg`} />
+                <img src={`http://localhost:5000/pet-pics/${petProfile.name}.jpg`} alt=""/>
             </div>
                 <h2 className="pet-name">{petProfile.name}</h2>
             <div className="pet-info">

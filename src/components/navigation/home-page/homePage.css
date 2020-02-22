@@ -5,7 +5,7 @@
     text-align: center;
     background-color: lightgray;
     border-radius: 4px;
-    margin-top: 50px;
+    margin-top: 100px;
     min-height: 440px;
     background: url('../../res/images/banner-back.jpg') center no-repeat;
     background-size: cover;
@@ -164,3 +164,80 @@
 .adoption-glass-banner:hover{
     background-color: rgba(0, 0, 0, 0.466);
 }
+
+@media only screen and (max-width: 768px) {
+
+    .banner{
+        margin-top: 140px;
+    }
+
+    .banner h2 {
+        font-size: 1.9em;
+        /* border: 1px solid white; */
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .banner .banner-quote {
+        margin-top: 20px;
+    }
+
+    .find-pets {
+        /* border: 1px solid black; */
+        width: 100%;
+    }
+
+    .find-pets img {
+        width: 50px;
+        padding: 2px;
+    }
+
+    .find-pets .location .city-name {
+        font-size: 0.6em;
+        font-weight: 700;
+    }
+
+    .find-pets h3 {
+        font-family: 0.7em;
+        text-align: center;
+    }
+
+    .find-pets .cats,
+    .dogs,
+    .location {
+        width: 110px;
+    }
+
+    .pet-articles {
+        flex-direction: column;
+        /* border: 1px solid black; */
+        width: 100%;
+    }
+
+    .dog-adoption,
+    .cat-adoption {
+        width: 300px;
+        height: 150px;
+        margin: auto;
+        /* border: 1px solid black; */
+    }
+
+    .dog-adoption h2, .cat-adoption h2{
+        font-size: 1.5em;
+    }
+
+    .dog-adoption {
+        margin-top: 30px;
+    }
+}
+
+/* @media only screen and (min-width: 1000px){
+    .banner h2{
+        margin-top: 80px;
+        font-size: 1.9em;
+    }
+
+    .find-pets{
+        width: 100%;
+    }
+} */

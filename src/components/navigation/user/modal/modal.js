@@ -71,7 +71,7 @@ const Modal = (props) => {
                     <div className="input-element">
                         <input type="file" name="my-file" id="user-dp-inel" onChange={onChange}/>
                     </div>
-                    <div class="user-info">
+                    <div className="user-info">
                         <div className="input-element">
                             <label htmlFor="user-address">Address</label>
                             <textarea name="user-address" id="user-address">

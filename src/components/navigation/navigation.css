@@ -3,6 +3,17 @@
     min-height: 10vh;
     justify-content: space-around;
     align-items: center;
+    /* border: 1px solid black; */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(85, 85, 85, 0.342);
+    z-index: 100;
+}
+
+.navigation .brand-logo{
+    /* border: 1px solid black; */
 }
 
 .navigation .brand-logo{
@@ -29,6 +40,8 @@
 .navigation .nav-items{
     display: flex;
     /* border: 1px solid black; */
+    right: 140px;
+    position: fixed;
     height: 8vh;
     align-items: center;
     justify-content: space-around;
@@ -38,6 +51,11 @@
 .navigation .nav-items li{
     list-style: none;
 }
+
+ul{
+    list-style: none;
+}
+
 
 .navigation .nav-items li .nav-item{
     font-size: 0.9em;
@@ -63,6 +81,10 @@
 
 .active-nav-link .nav-item{
     color: white;
+}
+
+.mobile-view-user{
+    display: none;
 }
 
 .petsweb-user{
@@ -92,6 +114,7 @@
     box-shadow: 0 20px 12px -10px rgb(7, 7, 7);
     opacity: 0;
     transition: all .4s ease;
+    z-index: 101;
 }
 
 .petsweb-user-list li{
@@ -151,38 +174,141 @@
     margin-right: -70px;
 }
 
+/* Burger Icon */
 
-/* background-color: #ff2a95; */
-
-/* div.nav li a{
-    text-decoration: none;
-    margin: 0 10px;
+.burger {
+    display: none;
     position: relative;
-    z-index: 0;
-    cursor: pointer;
-} */
+    background-color: rgb(230, 230, 230);
+    right: 0;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
 
-/* .navigation ul li a:before, .navigation ul li a:after{
+.line {
     position: absolute;
-    opacity: 0;
-    width: 0%;
-    height: 2px;
+    top: 50%;
+    left: 50%;
+    width: 27px;
+    height: 3px;
+    background-color: rgb(22, 22, 22);
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
+
+.line:before,
+.line:after {
     content: '';
-    background: #ffffff;
-    transition: all 0.4s;
+    width: 27px;
+    height: 3px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgb(22, 22, 22);
+    transition: all .4s ease;
 }
 
-.navigation ul li:before {
-    left: 0px;
-    top: 0px;
+.line:before {
+    margin-top: -8px;
 }
 
-.navigation ul li:after {
-    right: 0px;
-    bottom: 0px;
+.line:after {
+    margin-top: 8px;
 }
 
-.navigation ul li:hover:before, .navigation ul li:hover:after{
-    opacity: 1;
-    width: 100%;
-} */
+
+.active {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.active .line:before {
+    transform: rotate(45deg);
+    background-color: #EE316B;
+    margin-top: 0;
+}
+
+.active .line:after {
+    transform: rotate(135deg);
+    background-color: #EE316B;
+    margin-top: 0;
+}
+
+.vanish {
+    /* opacity: 0; */
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .mobile-view-user{
+        display: block;
+        width: 150px;
+        display: block;
+        top: 80px;
+    }
+
+    .mobile-view-user .petsweb-user img:first-child{
+        width: 50px;
+        height: 50px;
+    }
+
+    .navigation{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 0.973);
+    }
+
+    .navigation .show {
+        display: block;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .glass {
+        position: fixed;
+        display: none;
+        top: 10vh;
+        width: 100%;
+        height: 100vh;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.856);
+        transition: all .4s ease;
+    }
+
+    .navigation .nav-items {
+        width: 60%;
+        top: 10vh;
+        position: fixed;
+        flex-direction: column;
+        height: 90vh;
+        z-index: 100;
+        background-color: rgb(255, 255, 255);
+        right: 0;
+        background-color: #383838;
+        transform: translateX(100%);
+        transition: all .4s ease;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .navigation .nav-items li .nav-item {
+        color: white;
+    }
+
+    .burger,
+    .line {
+        z-index: 100;
+    }
+}
+
+.navigation .slide {
+    transform: translateX(0%);
+}

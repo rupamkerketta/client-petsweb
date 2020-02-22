@@ -41,3 +41,33 @@
     transform: scale(1.04);
     box-shadow: 0 27px 14px -10px rgb(116, 114, 114);
 }
+
+@media only screen and (max-width: 768px){
+    .dog-container{
+        width: 92%;
+        margin-top: 21vh;
+    }
+
+    .dog-card{
+        margin: 7px;
+        margin-top: 20px;
+        width: 160px;
+        height: 200px;
+    }
+
+    .dog-card .dog-pic {
+        width: 100%;
+        /* border: 1px solid blue; */
+        min-height: 150px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+
+    .dog-card .dog-name{
+        font-size: 1em;
+    }
+
+    .dog-card h3{
+        font-size: 0.7em;
+    }
+}

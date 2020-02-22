@@ -37,7 +37,7 @@ const Dogs = (props) => {
                             </NavLink>
                             <h3 className="dog-name">{dog.name}</h3>
                             <h3>{dog.breed}</h3>
-                            <h3>{dog.colour}</h3>
+                            <h3></h3>
                         </div>
                     )})
             }

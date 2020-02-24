@@ -1,3 +1,3 @@
-const proxy = 'http://192.168.137.1:5069';
+const proxy = 'http://10.4.200.18:5069';
 
 export default proxy;

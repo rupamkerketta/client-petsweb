@@ -26,7 +26,7 @@ const Cats = (props) => {
     }, []);
 
     return(
-        <div class="dog-container">
+        <div className="dog-container">
             {
                 dogs.map(dog => {
                     const style = {

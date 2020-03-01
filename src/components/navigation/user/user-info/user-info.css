@@ -1,0 +1,51 @@
+.update-info-user{
+    /* border: 1px solid black; */
+    margin: 100px;
+    width: 500px;
+    margin: auto;
+    padding: 17px;
+}
+
+
+
+.update-info-user form{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.update-info-user form .input-element{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid black; */
+    height: 100px;
+    margin-top: 20px;
+    background-color: rgb(212, 212, 212);
+    border-radius: 4px;
+}
+
+.update-info-user form input[type="text"],
+textarea {
+    width: 200px;
+    padding: 7px;
+    font-family: "Poppins";
+    border-radius: 4px;
+}
+
+.update-info-user form input[type="text"]{
+    border: 0;
+}
+
+.update-info-user form input[type="submit"] {
+    border: 0;
+    background-color: #0087cc;
+    margin-top: 27px;
+    padding: 7px;
+    font-family: "Poppins";
+    color: white;
+    cursor: pointer;
+}

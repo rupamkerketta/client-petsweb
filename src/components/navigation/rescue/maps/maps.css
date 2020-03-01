@@ -1,0 +1,42 @@
+.my-form{
+    /* border: 1px solid black; */
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;;
+    margin: auto;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+label{
+    font-family: 'Poppins';
+    color: rgb(27, 27, 27);
+    letter-spacing: 1.5px;
+
+}
+
+.my-form input[type="text"]{
+    border: 0;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.my-form .form-group{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+
+#address{
+    width: 100%;
+    margin-top: 27px;
+}
+
+#address label{
+    /* border: 1px solid black; */
+    text-align: center;
+}

@@ -63,3 +63,17 @@
     width: 40px;
     height: 40px;
 }
+
+.coo{
+    /* border: 1px solid black; */
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.coo h3{
+    font-family: "Poppins";
+    letter-spacing: 2px;
+    color: rgb(95, 95, 95);
+    font-weight: 100;
+}

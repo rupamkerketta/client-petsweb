@@ -1,3 +1,3 @@
-const proxy = 'http://192.168.137.1:5069';
+const proxy = 'http://localhost:5000';
 
 export default proxy;

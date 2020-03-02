@@ -1,0 +1,57 @@
+.timeline-tile{
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 4px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.timeline-tile h3{
+    font-family: 'Poppins';
+    color: rgb(51, 51, 51);
+}
+
+.timeline-tile h5{
+    font-family: "Poppins";
+    font-weight: 100;
+    color: rgb(80, 80, 80);
+}
+
+.timeline-tile img{
+    width: 120px;
+    border-radius: 5px;
+}
+
+.rescue-status img{
+    width: 70px;
+}
+
+.rescue-status h5{
+    margin-top: 10px;
+}
+
+.rescue-status{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.status-title{
+    /* border: 1px solid black; */
+    text-align: center;
+    padding: 10px;
+}
+
+.timeline-tile .latlng{
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px){
+
+}

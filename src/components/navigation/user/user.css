@@ -146,8 +146,6 @@ h4 {
     border-radius: 50%;
 }
 
-
-
 .update-info {
     position: absolute;
     right: 10px;
@@ -186,6 +184,18 @@ h4 {
     z-index: 8;
 }
 
+#timeline-title{
+    font-family: "Poppins";
+    /* border: 1px solid black; */
+    width: 100%;
+    margin: auto;
+    font-size: 1.9em;
+    color: rgb(70, 70, 70);
+    font-weight: 100;
+    margin-top: 10px;
+    border-bottom: 2px solid #72b9dd;
+}
+
 
 @media only screen and (max-width: 1920px) {
 
@@ -215,5 +225,75 @@ h4 {
 
     .main-banner {
         width: 100%;
+    }
+
+    .update-info button .upd-cnt{
+        display: none;
+    }
+
+    .update-info button{
+        width: 50px;
+    }
+    
+    .user-dp img{
+        left: 50%;
+        transform: translate(-50%, -10%);
+    }
+
+    .user-info-1{
+        /* border: 1px solid black; */
+        display: flex;
+        flex-flow: column;
+        justify-content: start;
+    }
+
+    .user-info-1 h2{
+        position: absolute;
+        text-align: center;
+        margin-top: 47px;
+        left: 0;
+        width: 100%;
+        /* border: 1px solid blue; */
+    }
+    .user-info-1 h4{
+        position: absolute;
+        text-align: center;
+        margin-top: 79px;
+        left: 0;
+        width: 100%;
+        /* border: 1px solid blue; */
+    }
+    .banner-2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .info-box-pet{
+        width: 100%;
+        /* border: 1px solid black; */
+    }
+
+    .info-box{
+        /* border: 1px solid black; */
+        width: 100%;
+        padding: 0;
+        height: fit-content;
+        margin-top: 10px;
+    }
+
+    .pet-history{
+        /* border: 1px solid black; */
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .pet-history div{
+        width: 100%;
+    }
+
+    .location-info{
+        /* border: 1px solid black; */
+        margin-top: 50px;
+        width: 50%;
     }
 }

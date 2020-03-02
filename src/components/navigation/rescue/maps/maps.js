@@ -5,6 +5,7 @@ import Autocomplete from 'react-google-autocomplete';
 import './maps.css';
 
 Geocode.setApiKey("AIzaSyAvgdrnwpA1D-EvtMg3d-aKyAwChhpKZuM");
+// Geocode.setApiKey("AIzaSyBMceYD8Bjd-QS--asaMDGk4yuckxAgaTo");
 Geocode.enableDebug();
 
 class Map extends Component{
@@ -282,6 +283,7 @@ class Map extends Component{
 
 				<AsyncMap
 					googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvgdrnwpA1D-EvtMg3d-aKyAwChhpKZuM&libraries=places"
+					// googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMceYD8Bjd-QS--asaMDGk4yuckxAgaTo&libraries=places"
 					loadingElement={
 						<div style={{ height: `100%` }} />
 					}

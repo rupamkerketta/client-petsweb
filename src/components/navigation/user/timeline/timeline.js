@@ -35,8 +35,8 @@ const Timeline = (props) => {
 			</div>
 			<div className="latlng">
 				<div>
-					<h5>Latitude : {props.details.latitude}</h5>
-					<h5>Longitude : {props.details.longitude}</h5>
+					<h5>Latitude : <b>{props.details.latitude}</b></h5>
+					<h5>Longitude : <b>{props.details.longitude}</b></h5>
 				</div>
 				<div>
 					<h3>Issue</h3>

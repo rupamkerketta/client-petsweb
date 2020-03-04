@@ -109,6 +109,10 @@ ul {
     margin-top: 50px;
 }
 
+.user-list-wrapper{
+    visibility: hidden;
+}
+
 .petsweb-user-list {
     width: 170px;
     height: 120px;
@@ -131,7 +135,7 @@ ul {
 .petsweb-user-list li {
     width: 100%;
     height: 100%;
-    transition: all .4s ease;
+    /* transition: all .4s ease; */
 }
 
 .petsweb-user-list a:hover {
@@ -147,7 +151,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    transition: all .4s ease;
+    /* transition: all .4s ease; */
 }
 
 .petsweb-user-list li:nth-child(1) a {
@@ -162,7 +166,6 @@ ul {
 
 .petsweb-user:focus+.petsweb-user-list{
     visibility: visible;
-    transform: translateY(25px);
 }
 
 .petsweb-user img {

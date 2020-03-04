@@ -100,23 +100,32 @@ ul {
     width: 10px;
 }
 
+.nonclick{
+    width: 170px;
+    height: 120px;
+    background-color: blue;
+    position: absolute;
+    z-index: 102;
+    margin-top: 50px;
+}
+
 .petsweb-user-list {
     width: 170px;
     height: 120px;
     position: absolute;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid black; */
     background-color: #252525;
     border-radius: 5px;
-    /* padding: 7px; */
-    margin-top: 15px;
+    margin-top: -15px;
     align-items: center;
     justify-content: space-around;
     box-shadow: 0 20px 12px -10px rgb(7, 7, 7);
-    opacity: 0;
     transition: all .4s ease;
     z-index: 101;
+    transform: translateY(25px);
+    visibility: hidden;
+    /* pointer-events: none; */
 }
 
 .petsweb-user-list li {
@@ -151,9 +160,9 @@ ul {
     border-bottom-right-radius: 5px;
 }
 
-.petsweb-user:focus+.petsweb-user-list {
-    opacity: 1;
-    transform: translateY(-5px);
+.petsweb-user:focus+.petsweb-user-list{
+    visibility: visible;
+    transform: translateY(25px);
 }
 
 .petsweb-user img {

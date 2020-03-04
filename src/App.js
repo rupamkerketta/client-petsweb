@@ -65,12 +65,12 @@ function App() {
 						disToken(cookie.token);
 						disUser(response.data.authData.username); // Username
 						disEmail(response.data.authData.email); // User-Email
-            // Setting the timeline
-            axios
+						// Setting the timeline
+						axios
 							.post(`${proxy}/timeline`, { email: response.data.authData.email })
-              .then((response) => {
-                disTimeline(response)
-              })
+							.then((response) => {
+								disTimeline(response);
+							})
 							.catch((err) => console.log(err));
 					})
 					.catch((error) => {

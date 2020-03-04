@@ -25,6 +25,7 @@ const Navigation = (props) => {
 	const userName = useSelector((state) => state.user);
 	const email = useSelector((state) => state.userEmail);
 	const emailSplit = email.split('@')[0];
+	// const [sideBar, setSideBar] = useState(false);
 
 	const handleBurger = () => {
 		const burger = document.querySelector('.burger');
@@ -53,15 +54,12 @@ const Navigation = (props) => {
 				</Link>
 				{loggedIn ? (
 					<div className="mobile-view-user">
-						<button className="petsweb-user">
+						<button className="petsweb-user mpwu">
 							{/* {userName} */}
-							<img
-								className="user-ico"
-								src={`${proxy}/user-pics/${emailSplit}.png`}
-								alt="User"
-							/>
+							<img className="user-ico" src={`${proxy}/user-pics/${emailSplit}.png`} alt="User" />
 							<img src={downArrow} alt="" />
 						</button>
+
 						<ul className="petsweb-user-list">
 							<li>
 								<NavLink to={`/user`}>Profile</NavLink>
@@ -94,13 +92,10 @@ const Navigation = (props) => {
 						<li>
 							<button className="petsweb-user">
 								{/* {userName} */}
-								<img
-									className="user-ico"
-									src={`${proxy}/user-pics/${emailSplit}.png`}
-									alt="User"
-								/>
+								<img className="user-ico" src={`${proxy}/user-pics/${emailSplit}.png`} alt="User" />
 								<img src={downArrow} alt="" />
 							</button>
+
 							<ul className="petsweb-user-list">
 								<li>
 									<NavLink to={`/user`}>Profile</NavLink>

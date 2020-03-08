@@ -6,6 +6,8 @@ import proxy from '../../../../proxy/proxy';
 
 import success from '../../../res/images/success.png';
 import error from '../../../res/images/error.png';
+import initiated from '../../../res/images/process.png';
+
 import axios from 'axios';
 
 const Timeline = (props) => {
@@ -56,14 +58,21 @@ const Timeline = (props) => {
 				{status != null ? status === 'Not Saved' ? (
 					<div className="rescue-status">
 						<img className="status" src={error} alt="" />
-						<h5>Processing Rescue Request</h5>
+						<h5>Request Posted</h5>
 					</div>
-				) : (
+				) : null : null}
+				{status != null ? status === 'Saved' ? (
 					<div className="rescue-status">
 						<img className="status" src={success} alt="" />
-						<h5>Pet Rescued</h5>
+						<h5>Pet Saved</h5>
 					</div>
-				) : null}
+				) : null : null}
+				{status != null ? status === 'Initiated' ? (
+					<div className="rescue-status">
+						<img className="status" src={initiated} alt="" />
+						<h5>Process Initiated</h5>
+					</div>
+				) : null : null}
 			</div>
 		</div>
 	);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Redirect, NavLink } from 'react-router-dom';
 import './user.css';
 
 // Proxy
@@ -36,6 +36,7 @@ const User = () => {
 	const [ flag, setFlag ] = useState(false);
 	const [ rescuePosts, setRescuePosts ] = useState([]);
 	const [ rescuePostsF, setRescuePostsF ] = useState(null);
+	const [ myAnimals, setMyAnimals ] = useState(null);
 
 	// LoggedIn Status
 	const loggedIN = useState(useSelector((state) => state.loggedIN));
@@ -57,6 +58,7 @@ const User = () => {
 	useEffect(() => {
 		getUserDetails();
 		getTimeLine();
+		getAnimals();
 	}, []);
 
 	const getTimeLine = () => {
@@ -67,6 +69,16 @@ const User = () => {
 				setRescuePosts(response.data);
 				console.log(response.data.length);
 				setRescuePostsF(response.data.length);
+			})
+			.catch((err) => console.log(err));
+	};
+
+	const getAnimals = () => {
+		axios
+			.post(`${proxy}/api/my-animals`, { email: email })
+			.then((response) => {
+				console.log(response.data);
+				setMyAnimals(response.data);
 			})
 			.catch((err) => console.log(err));
 	};
@@ -151,8 +163,6 @@ const User = () => {
 						<img src={pin} alt="Location" />
 						<div className="location-content">
 							<h2>Bangalore</h2>
-							<h2>Karnataka</h2>
-							<h2>India - 560029</h2>
 						</div>
 					</div>
 
@@ -168,7 +178,19 @@ const User = () => {
 					</div>
 				</div>
 
-				<div className="info-box-pet" />
+				<div className="info-box-pet">
+					{myAnimals ? (
+						myAnimals.map((animal) => {
+							return (
+								<NavLink to={`pets/${animal.name}`}>
+									<div className="myPetPic">
+										<img src={`${proxy}/pet-pics/${animal.name}.jpg`} alt="" />
+									</div>
+								</NavLink>
+							);
+						})
+					) : null}
+				</div>
 			</div>
 
 			<div className="banner-3">

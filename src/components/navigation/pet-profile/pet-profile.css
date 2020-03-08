@@ -100,4 +100,23 @@
     width: 210px;
     margin: auto;
     border-radius: 10px;
+    margin-top: 100px;
+}
+
+.pet-owner{
+    font-weight: 100;
+    font-family: 'Poppins';
+    text-align: center;
+    color: rgb(83, 83, 83);
+}
+
+@media only screen and (max-width: 768px){
+    .about-pet{
+        flex-direction: column;
+        /* border: 1px solid black; */
+    }
+
+    .about-pet div{
+        width: 100%;
+    }
 }

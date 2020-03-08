@@ -34,6 +34,7 @@ const PetProfile = ({match}) => {
                 <img src={`${proxy}/pet-pics/${petProfile.name}.jpg`} alt=""/>
             </div>
                 <h2 className="pet-name">{petProfile.name}</h2>
+                <h4 className="pet-owner">Owned By : {petProfile.mail}</h4>
             <div className="pet-info">
                 {petProfile.breed} . Adult . Male
             </div>

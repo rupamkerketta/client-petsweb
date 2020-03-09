@@ -1,6 +1,7 @@
 import React from 'react';
 import './footer.css';
 import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -18,14 +19,16 @@ const Footer = () => {
                 </div>
                 <div className="column-wrapper">
                     <div>
-                        <h4>About Petsweb</h4>
+                        <h4 style={{textAlign: 'center'}}>About Petsweb</h4>
                         <ul className="topic-items">
-                            <li>
-                                About Petsweb
+                            <li style={{ textAlign: 'center' }}>
+                                <NavLink to="/about" style={{textDecoration: 'none', color: 'white'}}>
+                                    About Petsweb
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    {/* <div>
                         <h4>Pet Adoption</h4>
                         <ul className="topic-items">
                             <li>
@@ -52,7 +55,7 @@ const Footer = () => {
                                 Cat Breeds
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="bottom-line">

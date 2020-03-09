@@ -16,6 +16,9 @@ import UserDp from './user-dp/user-dp';
 // UserInfo
 import UserInfo from './user-info/user-info';
 
+// PetUpload
+import PetUpload from './pet-upload/pet-upload';
+
 // Timeline-Tile
 import Timeline from './timeline/timeline';
 
@@ -27,6 +30,10 @@ const User = () => {
 	const user = useSelector((state) => state.user);
 	const email = useSelector((state) => state.userEmail);
 	const timeline = useSelector((state) => state.timeline);
+	const myAnimals = useSelector((state) => state.pets);
+	const bio = useSelector((state) => state.bio);
+	const phone = useSelector((state) => state.phone);
+	const address = useSelector((state) => state.address);
 	const emailSplit = email.split('@')[0];
 
 	const [ showModal, setShowModal ] = useState(false);
@@ -36,7 +43,6 @@ const User = () => {
 	const [ flag, setFlag ] = useState(false);
 	const [ rescuePosts, setRescuePosts ] = useState([]);
 	const [ rescuePostsF, setRescuePostsF ] = useState(null);
-	const [ myAnimals, setMyAnimals ] = useState(null);
 
 	// LoggedIn Status
 	const loggedIN = useState(useSelector((state) => state.loggedIN));
@@ -58,7 +64,7 @@ const User = () => {
 	useEffect(() => {
 		getUserDetails();
 		getTimeLine();
-		getAnimals();
+		// getInfo();
 	}, []);
 
 	const getTimeLine = () => {
@@ -73,15 +79,16 @@ const User = () => {
 			.catch((err) => console.log(err));
 	};
 
-	const getAnimals = () => {
-		axios
-			.post(`${proxy}/api/my-animals`, { email: email })
-			.then((response) => {
-				console.log(response.data);
-				setMyAnimals(response.data);
-			})
-			.catch((err) => console.log(err));
-	};
+	// const getInfo = () => {
+	//     axios.post(`${proxy}/get-apb`, { email: email })
+	// 		.then((response) => {
+	// 			console.log('[get-apb] ' + response.data[0]);
+	//             setBio(response.data[0].bio);
+	//             setPhone(response.data[0].ph_no);
+	//             setAdd(response.data[0].address1);
+	//          })
+	//         .catch(err => console.log(err));
+	// }
 
 	const handleUpdate = (flag) => {
 		if (showModal) {
@@ -91,7 +98,7 @@ const User = () => {
 		}
 
 		if (flag) {
-			window.location.reload(true);
+			window.location.reload = true;
 		}
 	};
 
@@ -114,6 +121,13 @@ const User = () => {
 							userDetails={userDetails}
 							handleUpdate={handleUpdate}
 							userPic={`${proxy}/user-pics/${emailSplit}.png`}
+						/>
+					) : (
+						''
+					)}
+					{current === 'upload-pet' ? (
+						<PetUpload
+							handleUpdate={handleUpdate}
 						/>
 					) : (
 						''
@@ -162,7 +176,9 @@ const User = () => {
 					<div className="location-info">
 						<img src={pin} alt="Location" />
 						<div className="location-content">
-							<h2>Bangalore</h2>
+							<h2>{bio ? bio : null}</h2>
+							<h2>{phone ? phone : null}</h2>
+							<h2>{address ? address : null}</h2>
 						</div>
 					</div>
 
@@ -179,8 +195,8 @@ const User = () => {
 				</div>
 
 				<div className="info-box-pet">
-					{myAnimals ? (
-						myAnimals.map((animal) => {
+					{myAnimals != null ? (
+						myAnimals.data.map((animal) => {
 							return (
 								<NavLink to={`pets/${animal.name}`}>
 									<div className="myPetPic">
@@ -190,6 +206,14 @@ const User = () => {
 							);
 						})
 					) : null}
+					<h5
+						onClick={() => {
+							setCurrent('upload-pet');
+							handleUpdate();
+						}}
+					>
+						Add Pet
+					</h5>
 				</div>
 			</div>
 

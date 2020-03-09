@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 import './user-dp.css';
 
+import proxy from '../../../../proxy/proxy';
+
 const UserDp = (props) => {
 	const [ newUserDP, setNewUserDP ] = useState(null);
 	const [ email, setEmail ] = useState(useSelector((state) => state.userEmail));
@@ -25,7 +27,7 @@ const UserDp = (props) => {
 		formData.append('email', email.split('@')[0]);
 
 		try {
-			const res = await axios.post('http://localhost:5000/upload-userdp', formData, {
+			const res = await axios.post(`${proxy}/upload-userdp`, formData, {
 				headers: {
 					'Content-Type': 'multipart/form-data'
 				}

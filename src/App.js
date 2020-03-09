@@ -44,10 +44,30 @@ function App() {
 		dispatch({ type: 'SET_EMAIL', payload: userEmail });
 	};
 
-	// settimeline
+	// set-timeline
 	const disTimeline = (timeline) => {
 		dispatch({ type: 'SET_TIMELINE', payload: timeline });
 	};
+
+	// set-pets
+	const disPets = (pets) => {
+		dispatch({ type: 'SET_PETS', payload: pets });
+	};
+
+	// set-bio
+	const disBio = (bio) => { 
+		dispatch({ type: 'SET_BIO', payload: bio });
+	}
+
+	// set-phone
+	const disPhone = (phone) => { 
+		dispatch({ type: 'SET_PHONE', payload: phone });
+	}
+
+	// set-address
+	const disAdd = (phone) => { 
+		dispatch({ type: 'SET_ADD', payload: phone });
+	}
 
 	useEffect(
 		() => {
@@ -70,6 +90,22 @@ function App() {
 							.post(`${proxy}/timeline`, { email: response.data.authData.email })
 							.then((response) => {
 								disTimeline(response);
+							})
+							.catch((err) => console.log(err));
+						axios
+							.post(`${proxy}/api/my-animals`, { email: response.data.authData.email })
+							.then((response) => {
+								// console.log(response.data);
+								disPets(response);
+							})
+							.catch((err) => console.log(err));
+						axios
+							.post(`${proxy}/get-apb`, { email:  response.data.authData.email})
+							.then((response) => {
+								// console.log('[get-apb] ' + response.data[0]);
+								disBio(response.data[0].bio);
+								disPhone(response.data[0].ph_no);
+								disAdd(response.data[0].address1);
 							})
 							.catch((err) => console.log(err));
 					})

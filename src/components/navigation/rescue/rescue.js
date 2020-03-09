@@ -145,6 +145,7 @@ const Rescue = () => {
 						<div>
 							<label for="urgency">Urgency</label>
 							<select name="urgency" id="urgency" onChange={handleUrgency}>
+								<option value="">---</option>
 								<option value="urgent">Urgent</option>
 								<option value="very-urgent">Very Ugent</option>
 								<option value="not-urgent">Not Urgent</option>
@@ -154,6 +155,7 @@ const Rescue = () => {
 						<div>
 							<label for="animal-type">Animal Type</label>
 							<select name="" id="animal-type" onChange={handleAType}>
+								<option value="">---</option>
 								<option value="D">Dog</option>
 								<option value="C">Cat</option>
 								<option value="O">Others</option>

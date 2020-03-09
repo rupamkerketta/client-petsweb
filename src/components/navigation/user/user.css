@@ -101,12 +101,14 @@ h4 {
     /* border: 1px solid black; */
     width: 200px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 50px;
+    margin-bottom: -30px;
+    text-align: right;
 }
 
 .location-info .location-content h2 {
     font-family: 'Poppins';
-    color: rgb(75, 75, 75);
+    color: rgb(121, 121, 121);
     font-size: 1em;
     font-weight: 100;
 }
@@ -302,7 +304,7 @@ h4 {
     .pet-history{
         /* border: 1px solid black; */
         width: 100%;
-        margin-top: 10px;
+        margin-top: 50px;
     }
 
     .pet-history div{
@@ -313,5 +315,9 @@ h4 {
         /* border: 1px solid black; */
         margin-top: 50px;
         width: 50%;
+    }
+
+    .myPetPic img{
+        width: 80px;
     }
 }

@@ -4,6 +4,10 @@ import setUser from './setUser';
 import setEmail from './setEmail';
 import showNav from './showNav';
 import timeline from './setTimeline';
+import setPets from './setPets';
+import setBio from './setBio';
+import setPhone from './setPhone';
+import setAdd from './setAdd';
 
 import { combineReducers } from 'redux';
 
@@ -13,7 +17,11 @@ const allReducers = combineReducers({
 	user: setUser,
 	userEmail: setEmail,
 	showNav: showNav,
-	timeline: timeline
+	timeline: timeline,
+	pets: setPets,
+	phone: setPhone,
+	bio: setBio,
+	address: setAdd
 });
 
 const rootReducer = (state, action) => {

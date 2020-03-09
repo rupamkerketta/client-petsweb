@@ -1,0 +1,45 @@
+.pet-upload img{
+    width: 100px;
+    height: 100px;
+    border-radius: 7px;
+    margin: auto;
+}
+
+.pet-upload form{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+}
+
+.pet-upload label{
+    width: 150px;
+    text-align: left;
+    /* border: 1px solid black; */
+}
+
+.pet-upload .input-element{
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.pet-upload input[type="text"]{
+    padding: 3px;
+    font-family: 'Poppins';
+}
+
+input[type="submit"]{
+    border: 0;
+    background-color: #0087cc;
+    color: white;
+    width: 200px;
+    padding: 4px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    font-family: 'Poppins';
+    cursor: pointer;
+}
